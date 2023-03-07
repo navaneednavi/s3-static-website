@@ -3,7 +3,7 @@ provider "aws" {
   version = "~>3.0"
 }
 resource "aws_s3_bucket" "s3" {
-  bucket = "mnbv"
+  bucket = "mnbvnavi147"
 }
 resource "aws_s3_bucket_policy" "policy" {
   bucket = aws_s3_bucket.s3.id
