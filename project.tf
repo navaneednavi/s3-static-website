@@ -20,5 +20,5 @@ resource "aws_s3_bucket_acl" "aclenable" {
   acl = "public-read"
 }
 output "s3-website-url" {
-  value = "aws_s3_website_configuration.website.website_endpoint"
+  value = "aws_s3_bucket_website_configuration.website.website_endpoint"
 }
