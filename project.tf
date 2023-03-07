@@ -1,9 +1,9 @@
 provider "aws" {
-  region = "ap-south-1"
   version = "~>3.0"
+  region = "us-west-1"
 }
 resource "aws_s3_bucket" "s3" {
-  bucket = "mnbvnavi1478"
+  bucket = "jekiasdfghjklasdfghgfdnavii"
 }
 resource "aws_s3_bucket_policy" "policy" {
   bucket = aws_s3_bucket.s3.id
@@ -15,10 +15,10 @@ resource "aws_s3_bucket_website_configuration" "website" {
     suffix = "index.html"
   }
 }
-resource "aws_s3_bucket_acl" "aclenable" {
+resource "aws_s3_bucket_acl" "example_bucket_acl" {
   bucket = aws_s3_bucket.s3.id
-  acl = "public-read"
+  acl    = "public-read"
 }
 output "s3-website-url" {
-  value = "aws_s3_bucket_website_configuration.website.website_endpoint"
+  value = aws_s3_bucket_website_configuration.website.website_endpoint
 }
