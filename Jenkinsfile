@@ -7,22 +7,22 @@ pipeline {
                 git 'https://github.com/navaneednavi/s3-static-website.git'
             }
         }
-        stage('init') {
+        stage('Terraform initialization') {
             steps {
                 sh 'sudo terraform init'
             }
         }
-        stage('apply') {
+        stage('Terraform apply') {
             steps {
                 sh 'sudo terraform apply --auto-approve'
             }
         }
-        stage('git-clone-2') {
+        stage('Cloning the website') {
             steps {
                 git branch: 'main', url: 'https://github.com/mohammedashiqu/anglular-project.git'
             }
         }
-        stage('copy') {
+        stage('Copy website to s3') {
             steps {
                 sh 'sudo aws s3 cp /var/lib/jenkins/workspace/pro22/ s3://jekiasdfghjklasdfghgfdnavii --recursive'
             }
