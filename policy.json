@@ -7,8 +7,8 @@
             "Principal": "*",
             "Action": "s3:*",
             "Resource": [
-                "arn:aws:s3:::mnbvnavi147",
-                "arn:aws:s3:::mnbvnavi147/*"
+                "arn:aws:s3:::mnbvnavi1478",
+                "arn:aws:s3:::mnbvnavi1478/*"
             ]
         }
     ]
