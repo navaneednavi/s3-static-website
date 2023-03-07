@@ -1,6 +1,6 @@
 provider "aws" {
   version = "~>3.0"
-  region = "us-west-1"
+  region = "ap-south-1"
 }
 resource "aws_s3_bucket" "s3" {
   bucket = "jekiasdfghjklasdfghgfdnavii"
